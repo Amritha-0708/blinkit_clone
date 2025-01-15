@@ -34,6 +34,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  flutter_bloc: ^8.1.6
+  bloc: ^8.1.4
+  flutter_screenutil: ^5.9.3
+  go_router: ^14.6.2
+  lazy_load_scrollview: ^1.3.0
+  json_serializable: ^6.9.2
+  build_runner: ^2.4.14
+  json_annotation: ^4.9.0
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +93,16 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: Celias Bold
+      fonts:
+        - asset: fonts/Celias/CeliasBold.otf
+    - family: Celias Bold Italic
+      fonts:
+        - asset: fonts/Celias/CeliasBoldItalic.otf
+    - family: Celias Regular
+      fonts:
+        - asset: fonts/Celias/Celias.otf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
