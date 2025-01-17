@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "Sprite",
+        "time": "8 mins",
+        "price": "96",
+        "quantity": "2 l",
+        "rating": {
+            "rate": "4.3",
+            "count": "132"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/10562a.jpg?ts=1690812772"
+    },
+    {
+        "id": 2,
+        "title": "Pepsi Cola Soft Drink",
+        "time": "10 mins",
+        "price": "76",
+        "quantity": "2 * 750ml",
+        "rating": {
+            "rate": "5",
+            "count": "98"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/7a914a42-9077-4a7d-becc-e79904d9d07f.jpg?ts=1717418544"
+    },
+    {
+        "id": 3,
+        "title": "Coca Cola Soft Drink",
+        "time": "7 mins",
+        "price": "40",
+        "quantity": "300ml",
+        "rating": {
+            "rate": "4",
+            "count": "1092"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/41b6af78-5d96-4f4e-bceb-325192c3081a.jpg?ts=1721410091"
+    },
+    {
+        "id": 4,
+        "title": "7UP Nimbus with Lemon Juice",
+        "time": "10 mins",
+        "price": "20",
+        "quantity": "350ml",
+        "rating": {
+            "rate": "3.8",
+            "count": "804"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/b330c04e-0e5f-4733-a43f-9351772763d8.jpg?ts=1721201147"
+    },
+    {
+        "id": 5,
+        "title": "Nestle KitKat Chunky Chocolate Bar",
+        "time": "10 mins",
+        "price": "60",
+        "quantity": "40 g",
+        "rating": {
+            "rate": "4",
+            "count": "10113"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/c72a7bfd-4836-44b6-b87e-c4eacf0ea02f.jpg?ts=1732170938"
+    },
+    {
+        "id": 6,
+        "title": "Miranda Soft Drink",
+        "time": "8 mins",
+        "price": "45",
+        "quantity": "600 ml",
+        "rating": {
+            "rate": "3.1",
+            "count": "1172"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/c8917bd6-5135-4636-8105-7b2835f3dba1.jpg?ts=1714468174"
+    }
+]

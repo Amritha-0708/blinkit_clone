@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Cadbury 5 Star Chocolate Filled Bar",
+    "time": "8 mins",
+    "price": "20",
+    "quantity": "38 g",
+    "rating": {
+      "rate": "4",
+      "count": "1023"
+    },
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/5b6d4fc0-a028-4f79-bee9-bbe1d6b288e9.jpg?ts=1736250969"
+  },
+  {
+    "id": 2,
+    "title": "Cadbury Dairy Milk Chocolate Bar",
+    "time": "8 mins",
+    "price": "53",
+    "quantity": "52 g",
+    "rating": {
+      "rate": "4.5",
+      "count": "9872"
+    },
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/69b1f251-2c5b-4455-adec-a8606084b9ea.jpg?ts=1730793131"
+  },
+  {
+    "id": 3,
+    "title": "Cadbury Dairy Milk Crispello Chocolate Bar",
+    "time": "8 mins",
+    "price": "40",
+    "quantity": "35 g",
+    "rating": {
+      "rate": "4.2",
+      "count": "9007"
+    },
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/82914d3e-106c-408e-8ba2-05f379a99d26.jpg?ts=1724299904"
+  },
+  {
+    "id": 4,
+    "title": "Galaxy Fusions Dark Chocolate with 70% Cocoa",
+    "time": "10 mins",
+    "price": "118",
+    "quantity": "110 g",
+    "rating": {
+      "rate": "3.8",
+      "count": "279"
+    },
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/5a05a754-93c6-42a3-997f-8d9a51103641.jpg?ts=1730965942"
+  },
+  {
+    "id": 5,
+    "title": "Nestle KitKat Chunky Chocolate Bar",
+    "time": "10 mins",
+    "price": "60",
+    "quantity": "40 g",
+    "rating": {
+      "rate": "4",
+      "count": "979"
+    },
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/c72a7bfd-4836-44b6-b87e-c4eacf0ea02f.jpg?ts=1732170938"
+  },
+  {
+    "id": 6,
+    "title": "Twix Caramel Wafer Chocolate",
+    "time": "10 mins",
+    "price": "68",
+    "quantity": "50 g",
+    "rating": {
+      "rate": "3.5",
+      "count": "75"
+    },
+    "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/da18037f-4e7f-40c2-865c-8d83edbef64f.jpg?ts=1723622321"
+  }
+]

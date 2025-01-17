@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Atta, Rice & Dal",
+        "image": "assets/images/atta_rice_dal.png"
+    },
+    {
+        "id": 2,
+        "title": "Chicken, Meat & Fish",
+        "image": "assets/images/chicken_meat_fish.png"
+    },
+    {
+        "id": 3,
+        "title": "Tea, Coffee & Health Drinks",
+        "image": "assets/images/tea_coffee.png"
+    },
+    {
+        "id": 4,
+        "title": "Vegetables & Fruits",
+        "image": "assets/images/vegetables_fruits.png"
+    },
+    {
+        "id": 5,
+        "title": "Breakfast & Instant Food",
+        "image": "assets/images/breakfast_instant.png"
+    },
+    {
+        "id": 6,
+        "title": "Masala, Oil & More",
+        "image": "assets/images/masala_oil.png"
+    },
+    {
+        "id": 7,
+        "title": "Diary, Breads & Eggs",
+        "image": "assets/images/diary_bread.png"
+    },
+    {
+        "id": 8,
+        "title": "Cold Drinks and Juics",
+        "image": "assets/images/cold_drinks.png"
+    }
+]

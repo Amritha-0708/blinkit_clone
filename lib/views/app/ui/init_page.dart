@@ -43,7 +43,7 @@ class _InitPageState extends State<InitPage> {
                     text: "it",
                     style: TextStyle(
                       fontFamily: "Celias Bold",
-                      color: Colors.green,
+                      color: AppColors.textGreen,
                       fontSize: 40.sp,
                     ),
                   ),

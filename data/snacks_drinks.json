@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Sunfeast Dark Fantasy and chocolates",
+        "image": "assets/images/dark_fantasy.png"
+    },
+    {
+        "id": 2,
+        "title": "Cadbury 5 Star Chocolate Filled Bar",
+        "image": "assets/images/5_star.png"
+    },
+    {
+        "id": 3,
+        "title": "Appy Fizz & Fruit Flavoured Juice",
+        "image": "assets/images/fizz.png"
+    },
+    {
+        "id": 4,
+        "title": "Snickers Peanut Filled Bar",
+        "image": "assets/images/snickers.png"
+    },
+    {
+        "id": 5,
+        "title": "Unibic Choco Chip & Cookies",
+        "image": "assets/images/unibics_cookies.png"
+    },
+    {
+        "id": 6,
+        "title": "Orea & Cream fills",
+        "image": "assets/images/oreo_cream_fills.png"
+    },
+    {
+        "id": 7,
+        "title": "Sprite & Flavored Soft Drink",
+        "image": "assets/images/sprite.png"
+    },
+    {
+        "id": 8,
+        "title": "Britannia Tiger Biscuit & cookies",
+        "image": "assets/images/tiger_biscuit.png"
+    }
+]

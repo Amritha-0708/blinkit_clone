@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Amul Taaza Homogenised Toned Milk",
+        "time": "30 mins",
+        "price": "30",
+        "quantity": "1 Liter",
+        "rating": {
+            "rate": "4",
+            "count": "1032"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/6d41a6e4-eb1b-413c-8e20-7b9e892e42f8.jpg?ts=1712325555"
+    },
+    {
+        "id": 2,
+        "title": "Thums Up Soft Drink",
+        "time": "8 mins",
+        "price": "40",
+        "quantity": "750 ml",
+        "rating": {
+            "rate": "5",
+            "count": "901"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e69c587d-802a-40eb-a40b-a6bc9623526d.jpg?ts=1707312325"
+    },
+    {
+        "id": 3,
+        "title": "Pluffs Marshmallow (Pink & White)",
+        "time": "25 mins",
+        "price": "150",
+        "quantity": "45 g",
+        "rating": {
+            "rate": "3",
+            "count": "157"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/486099a.jpg?ts=1712910679"
+    },
+    {
+        "id": 4,
+        "title": "Chupa Chups Sour Belt Mixed Fruit Candy",
+        "time": "12 mins",
+        "price": "83",
+        "quantity": "30 g",
+        "rating": {
+            "rate": "4.2",
+            "count": "5763"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/24e197a4-11d7-4e15-8ebe-2366aebd2814.jpg?ts=1718182486"
+    },
+    {
+        "id": 5,
+        "title": "Ultimate Rolling Paper with Filter Tips & Crushing Tray",
+        "time": "15 mins",
+        "price": "90",
+        "quantity": "King Size",
+        "rating": {
+            "rate": "5",
+            "count": "12"
+        },
+        "image": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/478728a.jpg?ts=1690814280"
+    }
+]
