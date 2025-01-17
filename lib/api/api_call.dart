@@ -8,10 +8,11 @@ class ApiCall {
   Future<List<ProductDetails>?> getStoreData({String? dataLink}) async {
     final res = await http.get(Uri.parse(dataLink!));
     if (res.statusCode == 200) {
-      final List<dynamic> data_list = jsonDecode(res.body);
-      return data_list
+      final List<dynamic> dataList = jsonDecode(res.body);
+      return dataList
           .map((json) => ProductDetails.fromJson(json as Map<String, dynamic>))
           .toList();
     }
+    return null;
   }
 }

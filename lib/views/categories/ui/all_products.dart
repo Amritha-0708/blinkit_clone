@@ -46,7 +46,7 @@ class AllProducts extends StatelessWidget {
             ),
             CategoryListing(jsonFile: "data/kitchen_grocery.json"),
             SizedBox(
-              height: 12.sp,
+              height: 12.h,
             ),
             Text(
               "Snacks & Drinks",

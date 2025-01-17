@@ -17,11 +17,22 @@ class RestCategoryProductListing extends StatefulWidget {
 class _RestCategoryProductListingState
     extends State<RestCategoryProductListing> {
   List<ProductDetails> products = [];
+  Map<int, int> quantities = {};
+
   final apiCall = ApiCall();
   @override
   void initState() {
     super.initState();
     loadMoreData();
+    loadQuantity();
+  }
+
+  void loadQuantity() {
+    setState(() {
+      quantities = {
+        for (int i = 0; i < products.length; i++) i: 0,
+      };
+    });
   }
 
   Future<void> loadMoreData() async {
@@ -53,24 +64,33 @@ class _RestCategoryProductListingState
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(
-                    product.image ?? "",
-                    height: 100.h,
-                    width: 100.w,
-                    loadingBuilder: (BuildContext context, Widget child,
-                        ImageChunkEvent? loadingProgress) {
-                      if (loadingProgress == null) {
-                        return child;
-                      }
-                      return Center(
-                        child: CircularProgressIndicator(
-                          value: loadingProgress.expectedTotalBytes != null
-                              ? loadingProgress.cumulativeBytesLoaded /
-                                  (loadingProgress.expectedTotalBytes ?? 1)
-                              : null,
-                        ),
-                      );
-                    },
+                  Stack(
+                    children: [
+                      Image.network(
+                        product.image ?? "",
+                        height: 100.h,
+                        width: 100.w,
+                        loadingBuilder: (BuildContext context, Widget child,
+                            ImageChunkEvent? loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          }
+                          return Center(
+                            child: CircularProgressIndicator(
+                              value: loadingProgress.expectedTotalBytes != null
+                                  ? loadingProgress.cumulativeBytesLoaded /
+                                      (loadingProgress.expectedTotalBytes ?? 1)
+                                  : null,
+                            ),
+                          );
+                        },
+                      ),
+                      Positioned(
+                        right: 0,
+                        bottom: 0,
+                        child: Quantity(count: quantities[index] ?? 0),
+                      )
+                    ],
                   ),
                   Container(
                     padding: EdgeInsets.symmetric(
@@ -132,6 +152,103 @@ class _RestCategoryProductListingState
                 ],
               );
             },
+          );
+  }
+}
+
+class Quantity extends StatefulWidget {
+  int count;
+  Quantity({super.key, required this.count});
+
+  @override
+  State<Quantity> createState() => _QuantityState();
+}
+
+class _QuantityState extends State<Quantity> {
+  void _increaseCount() {
+    setState(() {
+      widget.count++;
+    });
+  }
+
+  void _decreaseCount() {
+    setState(() {
+      widget.count--;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.count == 0
+        ? GestureDetector(
+            onTap: () => _increaseCount(),
+            child: Container(
+              padding: EdgeInsets.all(8.0.r),
+              decoration: BoxDecoration(
+                  color: AppColors.pastelGreen,
+                  border: Border.all(color: AppColors.textGreen),
+                  borderRadius: BorderRadius.circular(10.r)),
+              child: Text(
+                "ADD",
+                style: TextStyle(
+                  fontFamily: "Celias Regular",
+                  color: AppColors.textGreen,
+                  fontSize: 10.sp,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          )
+        : Container(
+            decoration: BoxDecoration(
+              color: AppColors.textGreen,
+              border: Border.all(color: AppColors.textGreen),
+              borderRadius: BorderRadius.circular(10.r),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                GestureDetector(
+                  onTap: () => _decreaseCount(),
+                  child: Container(
+                    padding: EdgeInsets.all(8.0.r),
+                    child: Text(
+                      "-",
+                      style: TextStyle(
+                        fontFamily: "Celias Regular",
+                        color: Colors.white,
+                        fontSize: 20.sp,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ),
+                ),
+                Text(
+                  "${widget.count}",
+                  style: TextStyle(
+                    fontFamily: "Celias Regular",
+                    color: Colors.white,
+                    fontSize: 15.sp,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () => _increaseCount(),
+                  child: Container(
+                    padding: EdgeInsets.all(8.0.r),
+                    child: Text(
+                      "+",
+                      style: TextStyle(
+                        fontFamily: "Celias Regular",
+                        color: Colors.white,
+                        fontSize: 20.sp,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           );
   }
 }

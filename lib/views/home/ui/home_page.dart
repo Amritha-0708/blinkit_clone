@@ -6,6 +6,7 @@ import 'package:blinkit_clone/views/categories/ui/giftcard.dart';
 import 'package:blinkit_clone/views/categories/ui/kids.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -42,7 +43,7 @@ class HomePage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(8.0.r),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () => context.push("/profile_page"),
                         icon: Icon(
                           Icons.account_circle_sharp,
                           size: 40.r,
