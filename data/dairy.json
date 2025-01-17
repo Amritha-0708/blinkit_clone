@@ -5,6 +5,8 @@
         "time": "5 mins",
         "price": "28",
         "quantity": "500 ml",
+        "description": "",
+        "category": "diary",
         "rating": {
             "rate": "4.8",
             "count": "1832"
@@ -17,6 +19,8 @@
         "time": "8 mins",
         "price": "85",
         "quantity": "10 pieces",
+        "description": "",
+        "category": "diary",
         "rating": {
             "rate": "4.3",
             "count": "123"
@@ -29,6 +33,8 @@
         "time": "10 mins",
         "price": "60",
         "quantity": "450 g",
+        "description": "",
+        "category": "diary",
         "rating": {
             "rate": "3.2",
             "count": "672"
@@ -41,6 +47,8 @@
         "time": "12 mins",
         "price": "50",
         "quantity": "400 g",
+        "description": "",
+        "category": "diary",
         "rating": {
             "rate": "4.5",
             "count": "9872"

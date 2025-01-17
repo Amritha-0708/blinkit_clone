@@ -2,9 +2,10 @@
   {
     "id": 1,
     "title": "Cadbury 5 Star Chocolate Filled Bar",
-    "time": "8 mins",
     "price": "20",
     "quantity": "38 g",
+    "description": "",
+    "category": "chocolates",
     "rating": {
       "rate": "4",
       "count": "1023"
@@ -17,6 +18,8 @@
     "time": "8 mins",
     "price": "53",
     "quantity": "52 g",
+    "description": "",
+    "category": "chocolates",
     "rating": {
       "rate": "4.5",
       "count": "9872"
@@ -29,6 +32,8 @@
     "time": "8 mins",
     "price": "40",
     "quantity": "35 g",
+    "description": "",
+    "category": "chocolates",
     "rating": {
       "rate": "4.2",
       "count": "9007"
@@ -41,6 +46,8 @@
     "time": "10 mins",
     "price": "118",
     "quantity": "110 g",
+    "description": "",
+    "category": "chocolates",
     "rating": {
       "rate": "3.8",
       "count": "279"
@@ -53,6 +60,8 @@
     "time": "10 mins",
     "price": "60",
     "quantity": "40 g",
+    "description": "",
+    "category": "chocolates",
     "rating": {
       "rate": "4",
       "count": "979"
@@ -65,6 +74,8 @@
     "time": "10 mins",
     "price": "68",
     "quantity": "50 g",
+    "description": "",
+    "category": "chocolates",
     "rating": {
       "rate": "3.5",
       "count": "75"
