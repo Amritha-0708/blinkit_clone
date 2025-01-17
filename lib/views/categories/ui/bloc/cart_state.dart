@@ -9,8 +9,6 @@ abstract class CartState extends Equatable {
 
 class InitailCartState extends CartState {}
 
-class LoadingCartState extends CartState {}
-
 class EmptyCartState extends CartState {}
 
 class LoadedCartState extends CartState {

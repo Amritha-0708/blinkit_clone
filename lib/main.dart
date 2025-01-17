@@ -1,9 +1,13 @@
 import 'package:blinkit_clone/core/router.dart';
+import 'package:blinkit_clone/views/categories/ui/bloc/cart_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+final CartBloc cartBloc = CartBloc();
+
 void main() {
-  runApp(MyApp());
+  runApp(BlocProvider(create: (context) => cartBloc, child: const MyApp()));
 }
 
 class MyApp extends StatefulWidget {

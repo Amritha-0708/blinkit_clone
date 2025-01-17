@@ -1,8 +1,14 @@
 import 'dart:convert';
 
+import 'package:blinkit_clone/main.dart';
+import 'package:blinkit_clone/models/product_details.dart';
+import 'package:blinkit_clone/models/rating.dart';
 import 'package:blinkit_clone/theme/app_colors.dart';
+import 'package:blinkit_clone/views/categories/ui/bloc/cart_bloc.dart';
+import 'package:blinkit_clone/views/categories/ui/products/QuantityControl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -57,6 +63,18 @@ class _CategoryProductListingState extends State<CategoryProductListing> {
             itemCount: products.length,
             itemBuilder: (context, index) {
               final product = products[index];
+              final rate = double.parse(product['rating']['rate']);
+              final count = int.parse(product['rating']['count']);
+              final rating = Rating(rate: rate, count: count);
+              final productDetails = ProductDetails(
+                id: product['id'],
+                title: product['title'],
+                price: double.parse(product['price']),
+                description: product['description'],
+                category: product['category'],
+                image: product['image'],
+                rating: rating,
+              );
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -84,7 +102,29 @@ class _CategoryProductListingState extends State<CategoryProductListing> {
                       Positioned(
                         right: 0,
                         bottom: 0,
-                        child: Quantity(count: quantities[index] ?? 0),
+                        child: BlocBuilder<CartBloc, CartState>(
+                            builder: (context, state) {
+                          int count = 0;
+                          if (state is LoadedCartState &&
+                              state.cartItems.containsKey(productDetails)) {
+                            count = state.cartItems[productDetails]!.toInt();
+                          }
+                          return QuantityControl(
+                            count: count,
+                            onAdd: () => cartBloc.add(
+                              AddProductToCartEvent(productDetails),
+                            ),
+                            onRemove: () => cartBloc.add(
+                              RemoveProductFromCartEvent(productDetails),
+                            ),
+                            onIncrement: () => cartBloc.add(
+                              UpdateIncrementProductInCartEvent(productDetails),
+                            ),
+                            onDecrement: () => cartBloc.add(
+                              UpdateDecrementProductInCartEvent(productDetails),
+                            ),
+                          );
+                        }),
                       )
                     ],
                   ),

@@ -7,7 +7,7 @@ part 'cart_state.dart';
 class CartBloc extends Bloc<CartEvent, CartState> {
   CartBloc() : super(InitailCartState()) {
     on<AddProductToCartEvent>((AddProductToCartEvent event, Emitter emit) {
-      if (state is LoadingCartState || state is EmptyCartState) {
+      if (state is EmptyCartState || state is InitailCartState) {
         emit(LoadedCartState(
             cartItems: {event.product: 1},
             totalAmount: event.product.price ?? 0));
