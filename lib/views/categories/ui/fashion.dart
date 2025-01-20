@@ -1,3 +1,4 @@
+import 'package:blinkit_clone/core/utils.dart';
 import 'package:blinkit_clone/views/categories/ui/products/rest_category_product_listing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +27,7 @@ class Fashion extends StatelessWidget {
                   "https://fakestoreapi.com/products/category/men's%20clothing",
             ),
             SizedBox(
-              height: 12..h,
+              height: 12.h,
             ),
             Text(
               "Women's Clothing",
@@ -41,7 +42,7 @@ class Fashion extends StatelessWidget {
                   "https://fakestoreapi.com/products/category/women's%20clothing",
             ),
             SizedBox(
-              height: 12..h,
+              height: 12.h,
             ),
             Text(
               "Jewelery",
@@ -55,7 +56,11 @@ class Fashion extends StatelessWidget {
               dataLink: "https://fakestoreapi.com/products/category/jewelery",
             ),
             SizedBox(
-              height: 12..h,
+              height: 12.h,
+            ),
+            Utils.SeeAllProducts(),
+            SizedBox(
+              height: 12.h,
             ),
           ],
         ),

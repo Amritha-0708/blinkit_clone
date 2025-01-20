@@ -10,13 +10,13 @@ class QuantityControl extends StatelessWidget {
   final VoidCallback onDecrement;
 
   const QuantityControl({
-    Key? key,
+    super.key,
     required this.count,
     required this.onAdd,
     required this.onRemove,
     required this.onIncrement,
     required this.onDecrement,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

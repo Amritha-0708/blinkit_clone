@@ -4,7 +4,7 @@ import 'package:blinkit_clone/models/product_details.dart';
 import 'package:blinkit_clone/models/rating.dart';
 import 'package:blinkit_clone/theme/app_colors.dart';
 import 'package:blinkit_clone/views/categories/ui/bloc/cart_bloc.dart';
-import 'package:blinkit_clone/views/categories/ui/products/QuantityControl.dart';
+import 'package:blinkit_clone/views/quantity_control/QuantityControl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

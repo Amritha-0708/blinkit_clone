@@ -25,6 +25,15 @@ class _MyAppState extends State<MyApp> {
       minTextAdapt: true,
       builder: (_, context) {
         return MaterialApp.router(
+          theme: ThemeData(
+            scaffoldBackgroundColor: Colors.white,
+            appBarTheme: AppBarTheme(
+              backgroundColor: Colors.white,
+            ),
+            bottomAppBarTheme: BottomAppBarTheme(
+              color: Colors.white,
+            ),
+          ),
           title: "Blinkit",
           routerConfig: goRouter,
           debugShowCheckedModeBanner: false,

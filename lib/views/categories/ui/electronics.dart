@@ -1,3 +1,4 @@
+import 'package:blinkit_clone/core/utils.dart';
 import 'package:blinkit_clone/views/categories/ui/products/rest_category_product_listing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,6 +25,13 @@ class Electronics extends StatelessWidget {
             RestCategoryProductListing(
               dataLink:
                   "https://fakestoreapi.com/products/category/electronics",
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+            Utils.SeeAllProducts(),
+            SizedBox(
+              height: 12.h,
             ),
           ],
         ),

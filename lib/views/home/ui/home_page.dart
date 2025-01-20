@@ -1,10 +1,12 @@
 import 'package:blinkit_clone/theme/app_colors.dart';
 import 'package:blinkit_clone/views/categories/ui/all_products.dart';
+import 'package:blinkit_clone/views/categories/ui/bloc/cart_bloc.dart';
 import 'package:blinkit_clone/views/categories/ui/electronics.dart';
 import 'package:blinkit_clone/views/categories/ui/fashion.dart';
 import 'package:blinkit_clone/views/categories/ui/giftcard.dart';
 import 'package:blinkit_clone/views/categories/ui/kids.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
@@ -17,7 +19,6 @@ class HomePage extends StatelessWidget {
       child: DefaultTabController(
         length: 5,
         child: Scaffold(
-          backgroundColor: Colors.white,
           body: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) {
@@ -145,6 +146,54 @@ class HomePage extends StatelessWidget {
                 label: "Print",
               ),
             ],
+          ),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerFloat,
+          floatingActionButton: BlocBuilder<CartBloc, CartState>(
+            builder: (context, state) {
+              if (state is LoadedCartState) {
+                return Container(
+                  padding: EdgeInsets.all(8.0.r),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0.r),
+                      color: AppColors.textGreen),
+                  height: 50.h,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        "View Cart",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: "Calias Bold",
+                          fontSize: 14.sp,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 8.0.w,
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.all(3.0.r),
+                        decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 8, 87, 19),
+                            borderRadius: BorderRadius.circular(50.r)),
+                        child: InkWell(
+                          onTap: () => context.push("/cart"),
+                          child: Icon(
+                            Icons.navigate_next,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                );
+              }
+              return SizedBox.shrink();
+            },
           ),
         ),
       ),

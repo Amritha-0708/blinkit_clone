@@ -5,7 +5,7 @@ import 'package:blinkit_clone/models/product_details.dart';
 import 'package:blinkit_clone/models/rating.dart';
 import 'package:blinkit_clone/theme/app_colors.dart';
 import 'package:blinkit_clone/views/categories/ui/bloc/cart_bloc.dart';
-import 'package:blinkit_clone/views/categories/ui/products/QuantityControl.dart';
+import 'package:blinkit_clone/views/quantity_control/QuantityControl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -206,103 +206,6 @@ class _CategoryProductListingState extends State<CategoryProductListing> {
                 ],
               );
             },
-          );
-  }
-}
-
-class Quantity extends StatefulWidget {
-  int count;
-  Quantity({super.key, required this.count});
-
-  @override
-  State<Quantity> createState() => _QuantityState();
-}
-
-class _QuantityState extends State<Quantity> {
-  void _increaseCount() {
-    setState(() {
-      widget.count++;
-    });
-  }
-
-  void _decreaseCount() {
-    setState(() {
-      widget.count--;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return widget.count == 0
-        ? GestureDetector(
-            onTap: () => _increaseCount(),
-            child: Container(
-              padding: EdgeInsets.all(8.0.r),
-              decoration: BoxDecoration(
-                  color: AppColors.pastelGreen,
-                  border: Border.all(color: AppColors.textGreen),
-                  borderRadius: BorderRadius.circular(10.r)),
-              child: Text(
-                "ADD",
-                style: TextStyle(
-                  fontFamily: "Celias Regular",
-                  color: AppColors.textGreen,
-                  fontSize: 10.sp,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          )
-        : Container(
-            decoration: BoxDecoration(
-              color: AppColors.textGreen,
-              border: Border.all(color: AppColors.textGreen),
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                GestureDetector(
-                  onTap: () => _decreaseCount(),
-                  child: Container(
-                    padding: EdgeInsets.all(8.0.r),
-                    child: Text(
-                      "-",
-                      style: TextStyle(
-                        fontFamily: "Celias Regular",
-                        color: Colors.white,
-                        fontSize: 20.sp,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ),
-                ),
-                Text(
-                  "${widget.count}",
-                  style: TextStyle(
-                    fontFamily: "Celias Regular",
-                    color: Colors.white,
-                    fontSize: 15.sp,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () => _increaseCount(),
-                  child: Container(
-                    padding: EdgeInsets.all(8.0.r),
-                    child: Text(
-                      "+",
-                      style: TextStyle(
-                        fontFamily: "Celias Regular",
-                        color: Colors.white,
-                        fontSize: 20.sp,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
           );
   }
 }

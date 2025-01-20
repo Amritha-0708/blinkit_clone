@@ -1,3 +1,4 @@
+import 'package:blinkit_clone/core/utils.dart';
 import 'package:blinkit_clone/views/categories/ui/products/category_product_listing.dart';
 import 'package:blinkit_clone/views/categories/ui/products/category_listing.dart';
 import 'package:blinkit_clone/views/categories/ui/products/product_list.dart';
@@ -13,7 +14,7 @@ class AllProducts extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 8.0.w),
       child: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(
               height: 12.0.h,
@@ -72,6 +73,10 @@ class AllProducts extends StatelessWidget {
             SizedBox(
               height: 12.h,
             ),
+            Utils.SeeAllProducts(),
+            SizedBox(
+              height: 12.h,
+            ),
             Text(
               "Cold Drinks & Jucies",
               style: TextStyle(
@@ -81,6 +86,10 @@ class AllProducts extends StatelessWidget {
               ),
             ),
             CategoryProductListing(jsonFile: "data/softdrinks.json"),
+            SizedBox(
+              height: 12.h,
+            ),
+            Utils.SeeAllProducts(),
             SizedBox(
               height: 12.h,
             ),
@@ -95,7 +104,11 @@ class AllProducts extends StatelessWidget {
             CategoryProductListing(jsonFile: "data/dairy.json"),
             SizedBox(
               height: 12.h,
-            )
+            ),
+            Utils.SeeAllProducts(),
+            SizedBox(
+              height: 12.h,
+            ),
           ],
         ),
       ),
